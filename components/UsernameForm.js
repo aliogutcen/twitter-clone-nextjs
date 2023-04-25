@@ -2,9 +2,8 @@ import useUserInfo from "@/hooks/useUserInfo";
 import React, { useEffect, useState } from "react";
 
 export const UsernameForm = () => {
-  const [username, setUsername] = useState(defaultUsername || "");
   const { userInfo, status } = useUserInfo();
-
+  const [username, setUsername] = useState(defaultUsername);
   useEffect(() => {
     if (status === "loading") {
       return;
